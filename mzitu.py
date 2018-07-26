@@ -52,7 +52,7 @@ def getPicLink(url):
 			filename = '%s/%s/%s.jpg' % (os.path.abspath('.'), dirName, n)
 			print(u'开始下载图片：%s 第%s张' % (dirName, n))
 			with open(filename,'wb+') as f:
-				f.write(requests.get(jpgLink, header=header(jpgLink)).content)
+				f.write(requests.get(jpgLink, headers = header(jpgLink)).content)
 			n += 1
 		except:
 			pass
